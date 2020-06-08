@@ -15,7 +15,7 @@ int main(void){
 		
 		int n, i, j, temp;
 		
-		printf("초기값: ");
+		printf("first: ");
 		printArr();
 		
 		for(j = 0; j < AMT; j++){
@@ -26,7 +26,7 @@ int main(void){
 			arr[0] = temp;
 		}
 		
-		printf("결과값: ");
+		printf("result: ");
 		printArr();
  
 	return 0;
