@@ -1,11 +1,11 @@
 
 #include <stdio.h>
-#define D_WIDTH 5
-#define AMT 1
+#define D_WIDTH 32
+#define AMT 10
 #define RIGHT 100
 #define LEFT 200
  
-int arr[D_WIDTH] = {1, 0, 1, 1, 1}; // 32bit register
+int arr[D_WIDTH] = {1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}; // 32bit register
 
 void printArr(){
 	int i;
@@ -20,11 +20,11 @@ int main(void){
 		printf("first: ");
 		printArr();
 		
-		// flag = RIGHT;
-		flag = LEFT;
+		flag = RIGHT;
+		// flag = LEFT;
 		
 		if(flag == RIGHT){
-			printf("shift right\n");
+			printf("shift right, amount: %d\n", AMT);
 			// shift right
 			for(j = 0; j < AMT; j++){
 				temp = arr[0];
@@ -34,7 +34,7 @@ int main(void){
 			}		
 		}
 		else if(flag == LEFT) {
-			printf("shift left\n");
+			printf("shift left, amount: %d\n", AMT);
 			// shift left
 			for(j = 0; j < AMT; j++){
 				temp = arr[0];
